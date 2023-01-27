@@ -1,8 +1,8 @@
 blank_issues_enabled: true
 contact_links:
-  - name: "GitHub Discussions"
+  - name: 'GitHub Discussions'
     url: https://github.com/kachick/times_kachick/discussions/new
-    about: "When the issue is not sensitive, I would like to try GitHub Discussions"
-  - name: "Twitter"
+    about: 'When the issue is not sensitive, I would like to try GitHub Discussions'
+  - name: 'Twitter'
     url: https://twitter.com/_kachick
     about: "Sorry I don't active check the twitter timeline as an engineer, I have sub-account for my hobby use(It is boardgame/tablegame!). But I have opened Direct Message feature from anyone. Feel free to send some private messages via DM!"

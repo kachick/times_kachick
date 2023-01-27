@@ -8,9 +8,9 @@ labels: blog, tips, 'help wanted', question
 
 ## TL;DR
 
-* foo
-* bar
-* baz
+- foo
+- bar
+- baz
 
 ## 何についてか / About
 
@@ -27,6 +27,6 @@ ref: link, link
 
 ## 結論 / Conclusion
 
-* foo
-* bar
-* baz
+- foo
+- bar
+- baz
