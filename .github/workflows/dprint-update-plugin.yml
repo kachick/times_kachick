@@ -1,0 +1,30 @@
+name: Update dprint plugins
+on:
+  push:
+    branches: ['main']
+    paths:
+      - '.github/workflows/dprint-update-plugin.yml'
+  schedule:
+    - cron: '0 17 * * *'
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+# Allow one concurrent updates
+concurrency:
+  group: 'dprint'
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: kachick/action-update-dprint-plugins@main
+        with:
+          base-branch: 'main'
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+          # auto-merge: false # default: true
