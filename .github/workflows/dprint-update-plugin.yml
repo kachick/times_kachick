@@ -23,8 +23,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: kachick/action-update-dprint-plugins@main
+      - id: update-dprint-plugins
+        uses: kachick/action-update-dprint-plugins@main
         with:
           base-branch: 'main'
           github-token: '${{ secrets.GITHUB_TOKEN }}'
-          # auto-merge: false # default: true
+      - name: Merge sent PR
+        if: ${{ steps.update-dprint-plugins.outputs.pr_url != '' }}
+        run: gh pr merge --auto "${{ steps.update-dprint-plugins.outputs.pr_url }}"
