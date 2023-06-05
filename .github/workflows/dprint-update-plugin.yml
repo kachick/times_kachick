@@ -27,7 +27,7 @@ jobs:
         uses: kachick/action-update-dprint-plugins@v1-beta
         with:
           base-branch: 'main'
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
       # Enable `Allow auto-merge` in your repository settings if you need following steps
       - name: Merge sent PR
         # Merge if `dprint fmt` does not make any diff even after updating plugins
