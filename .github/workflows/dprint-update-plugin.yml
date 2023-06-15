@@ -5,7 +5,8 @@ on:
     paths:
       - '.github/workflows/dprint-update-plugin.yml'
   schedule:
-    - cron: '0 17 * * *'
+    # Run at 17:00 UTC every Monday
+    - cron: '0 17 * * 1'
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -13,9 +14,9 @@ permissions:
   contents: write
   pull-requests: write
 
-# Allow one concurrent updates
+# Allow one concurrent dprint updater
 concurrency:
-  group: 'dprint'
+  group: 'update-dprint'
   cancel-in-progress: true
 
 jobs:
@@ -24,10 +25,9 @@ jobs:
     timeout-minutes: 15
     steps:
       - id: update-dprint-plugins
-        uses: kachick/action-update-dprint-plugins@v1-beta
+        uses: kachick/action-update-dprint-plugins@v1.0.0
         with:
           base-branch: 'main'
-          github-token: '${{ secrets.GITHUB_TOKEN }}'
       # Enable `Allow auto-merge` in your repository settings if you need following steps
       - name: Merge sent PR
         # Merge if `dprint fmt` does not make any diff even after updating plugins
