@@ -15,7 +15,7 @@ jobs:
       - name: Dependabot metadata
         id: metadata
         uses: dependabot/fetch-metadata@v1.6.0
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Wait other jobs
         if: ${{steps.metadata.outputs.update-type != 'version-update:semver-major'}}
         uses: kachick/wait-other-jobs@v1
