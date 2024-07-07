@@ -1,8 +1,8 @@
 {
   "recommendations": [
-    "redhat.vscode-yaml",
+    "github.vscode-github-actions",
     "editorconfig.editorconfig",
-    "streetsidesoftware.code-spell-checker",
+    "tekumara.typos-vscode",
     "dprint.dprint",
     "jnoortheen.nix-ide"
   ]
