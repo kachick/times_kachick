@@ -3,7 +3,6 @@ name: Creating new issue by kachick
 about: Specialized to @kachick
 title: '日本語 / English'
 labels: blog, tips, 'help wanted', question
-
 ---
 
 ## TL;DR
